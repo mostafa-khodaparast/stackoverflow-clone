@@ -1,19 +1,21 @@
 import type { Metadata } from 'next'
 import './globals.css'
-
-
+import React from 'react'
+import { ClerkProvider } from '@clerk/nextjs'
 
 export const metadata: Metadata = {
   title: 'stack over flow',
-  description: 'this is a clone',
+  description: 'this is a clone'
 }
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+export default function RootLayout ({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en">
-      <body>
-        {children}
-      </body>
-    </html>
+    <ClerkProvider>
+      <html lang="en">
+        <body>
+          {children}
+        </body>
+      </html>
+    </ClerkProvider>
   )
 }
