@@ -4,10 +4,12 @@ import React from 'react'
 import { SignedIn, UserButton } from '@clerk/nextjs'
 import Darkmode from '@components/Darkmode'
 import MobileNav from '@components/MobileNav'
+import Searchbar from '@components/Searchbar'
 
 function Navbar () {
   return (
         <nav className='background-light900_dark200 flex-between fixed z-50 w-full gap-5 p-6 shadow-light-300 dark:shadow-none sm:px-12 '>
+            {/* logo */}
             <Link href='/' className='flex items-center gap-1'>
                 <Image
                     src='/assets/images/site-logo.svg'
@@ -19,8 +21,10 @@ function Navbar () {
                     <span className='text-primary-500'>overflow</span>
                 </p>
             </Link>
-            searchbar
-            <div className='flex-between gap-2'>
+            {/* search bar */}
+            <Searchbar />
+            {/* darkmode & user account and mobile menu */}
+            <div className='flex-between gap-3'>
                 <Darkmode />
                 <SignedIn>
                     <UserButton

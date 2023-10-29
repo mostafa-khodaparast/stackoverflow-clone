@@ -70,8 +70,22 @@ body {
             rgba(229, 237, 255, 0.25) 100%);
 }
 
+.hideMenuNav {
+    display: none;
+}
+
+.showMenuNav {
+    display: block;
+    position: absolute;
+    width: 250px;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    z-index: 10;
+}
+
 .primary-text-gradient {
-    background: linear-gradient(129deg, #ff7000 0%, #e2995f 100%) 
+    background: linear-gradient(129deg, #ff7000 0%, #e2995f 100%)
 }
 
 .custom-scrollbar::-webkit-scrollbar {
