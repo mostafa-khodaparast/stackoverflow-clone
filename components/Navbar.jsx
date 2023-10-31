@@ -4,7 +4,7 @@ import React from 'react'
 import { SignedIn, UserButton } from '@clerk/nextjs'
 import Darkmode from '@components/Darkmode'
 import MobileNav from '@components/MobileNav'
-import Searchbar from '@components/Searchbar'
+import GlobalSearchbar from '@components/GlobalSearchbar'
 
 function Navbar () {
   return (
@@ -22,7 +22,7 @@ function Navbar () {
                 </p>
             </Link>
             {/* search bar */}
-            <Searchbar />
+            <GlobalSearchbar />
             {/* darkmode & user account and mobile menu */}
             <div className='flex items-center justify-between gap-3'>
                 <Darkmode />

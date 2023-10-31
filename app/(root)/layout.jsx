@@ -9,7 +9,7 @@ function Layout ({ children }) {
             <Navbar />
             <div className='flex'>
                 <LeftSidebar />
-                <section className='flex max-h-screen flex-1 flex-col px-6 pb-6 pt-36 sm:px-14 md:pb-14'>
+                <section className='flex max-h-screen flex-1 flex-col px-3 pb-6 pt-36 sm:px-14 md:pb-14'>
                     <div className='mx-auto w-full max-w-5xl'>
                         {children}
                     </div>
