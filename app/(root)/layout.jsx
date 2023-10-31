@@ -1,18 +1,20 @@
+import LeftSidebar from '@components/LeftSidebar'
 import Navbar from '@components/Navbar'
+import RightSidebar from '@components/RightSidebar'
 import React from 'react'
 
-function Layout ({ children }: { children: React.ReactNode }) {
+function Layout ({ children }) {
   return (
-        <main className='background-light850_dark100 relative'>
+        <main className='relative h-screen bg-light-850 dark:bg-dark-100'>
             <Navbar />
             <div className='flex'>
-                left sidebar
+                <LeftSidebar />
                 <section className='flex max-h-screen flex-1 flex-col px-6 pb-6 pt-36 sm:px-14 md:pb-14'>
                     <div className='mx-auto w-full max-w-5xl'>
                         {children}
                     </div>
                 </section>
-                right sidebar
+                <RightSidebar />
             </div>
             toaster
         </main>

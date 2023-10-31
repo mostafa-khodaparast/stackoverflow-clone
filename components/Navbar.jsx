@@ -8,7 +8,7 @@ import Searchbar from '@components/Searchbar'
 
 function Navbar () {
   return (
-        <nav className='background-light900_dark200 flex-between fixed z-50 w-full gap-5 p-6 shadow-light-300 dark:shadow-none sm:px-12 '>
+        <nav className='fixed z-50 flex w-full items-center justify-between gap-5 bg-light-900 p-6 shadow-light-300 dark:bg-dark-200 dark:shadow-none sm:px-12 '>
             {/* logo */}
             <Link href='/' className='flex items-center gap-1'>
                 <Image
@@ -17,14 +17,14 @@ function Navbar () {
                     width={23}
                     height={23}
                 />
-                <p className='h2-bold text-dark-100 dark:text-light-900 max-sm:hidden'>stack
-                    <span className='text-primary-500'>overflow</span>
+                <p className=' text-[24px] font-bold leading-[31.2px] text-dark-100 dark:text-light-900 max-md:hidden'>stack
+                    <span className='text-orange-500'>overflow</span>
                 </p>
             </Link>
             {/* search bar */}
             <Searchbar />
             {/* darkmode & user account and mobile menu */}
-            <div className='flex-between gap-3'>
+            <div className='flex items-center justify-between gap-3'>
                 <Darkmode />
                 <SignedIn>
                     <UserButton

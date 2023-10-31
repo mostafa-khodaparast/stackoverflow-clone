@@ -1,10 +1,9 @@
-import type { Metadata } from 'next'
 import React from 'react'
 import { ClerkProvider } from '@clerk/nextjs'
 import './globals.css'
 import { DarkModeProvider } from '../context/darkmode'
 
-export const metadata: Metadata = {
+export const metadata = {
   title: 'stackoverflow',
   description: 'this is a clone',
   icons: {
@@ -12,17 +11,11 @@ export const metadata: Metadata = {
   }
 }
 
-export default function RootLayout ({ children }: { children: React.ReactNode }) {
+export default function RootLayout ({ children }) {
   return (
     <html lang="en">
       <body >
-        <ClerkProvider appearance={{
-          elements: {
-            formButtonPrimary: 'primary-gradient',
-            footerActionLink: 'hover:text-primary-500 hover:no-underline'
-          }
-        }}
-        >
+        <ClerkProvider>
           <DarkModeProvider>
             {children}
           </DarkModeProvider>

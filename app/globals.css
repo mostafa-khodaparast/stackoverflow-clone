@@ -2,11 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url("../styles/theme.css");
+/* @import url("../styles/theme.css"); */
 
+/* 
 body {
     font-family: "Inter", sans-serif;
-}
+} */
+/* 
+
 
 @layer utilities {
     .flex-center {
@@ -41,9 +44,7 @@ body {
         @apply max-w-full prose dark:prose-p:text-light-700 dark:pros
     }
 
-    .primary-gradient {
-        background: linear-gradient(129deg, #ff7000 0%, #e2995f 100%)
-    }
+    
 
     .dark-gradient {
         background: linear-gradient(232deg,
@@ -54,11 +55,16 @@ body {
     .tab {
         @apply min-h-full dark:bg-dark-400 bg-light-800 text-light-5
     }
-}
+} */
 
 /* .no-focus {
     @apply focus-visible:ring-0 focus-visible:ring-transparent
 } */
+
+
+.primary-gradient {
+    background: linear-gradient(129deg, #ff7000 0%, #e2995f 100%)
+}
 
 .active-theme {
     filter: invert(53%) sepia(98%) saturate(3332%) hue-rotate(0deg) brightness(104%) contrast(106%) !important;
