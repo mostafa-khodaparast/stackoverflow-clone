@@ -1,7 +1,7 @@
-import LeftSidebar from '@components/LeftSidebar'
-import Navbar from '@components/Navbar'
-import RightSidebar from '@components/RightSidebar'
 import React from 'react'
+import Navbar from '@components/Navbar'
+import LeftSidebar from '@components/LeftSidebar'
+import RightSidebar from '@components/RightSidebar'
 
 function Layout ({ children }) {
   return (
@@ -9,14 +9,14 @@ function Layout ({ children }) {
             <Navbar />
             <div className='flex'>
                 <LeftSidebar />
-                <section className='flex max-h-screen flex-1 flex-col px-3 pb-6 pt-36 sm:px-14 md:pb-14'>
+                <section className='flex max-h-screen flex-1 flex-col overflow-y-scroll px-3 pb-6 pt-36 sm:px-14 md:pb-14'>
                     <div className='mx-auto w-full max-w-5xl'>
                         {children}
                     </div>
                 </section>
                 <RightSidebar />
             </div>
-            toaster
+            {/* toaster */}
         </main>
   )
 }

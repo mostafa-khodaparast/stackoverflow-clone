@@ -1,6 +1,8 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
 /* 
 @layer utilities {
     .background-light850_dark100 {
@@ -200,4 +202,6 @@
                 rgba(23, 28, 35, 0.41) 0%,
                 rgba(19, 22, 28, 0.7) 100%);
     }
-} */
+}
+
+*/
