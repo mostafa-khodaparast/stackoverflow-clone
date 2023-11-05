@@ -1,9 +1,13 @@
 import React from 'react'
+import QuestionForm from '@components/QuestionForm'
 
-function AskQuestion () {
+function Page () {
   return (
-        <div>AskQuestion</div>
+    <>
+      <span className='text-lg font-bold text-dark-100 dark:text-light-900'>Ask a question</span>
+      <QuestionForm />
+    </>
   )
 }
 
-export default AskQuestion
+export default Page
