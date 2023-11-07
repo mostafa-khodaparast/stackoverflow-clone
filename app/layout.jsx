@@ -4,7 +4,7 @@ import './globals.css'
 import { DarkModeProvider } from '../context/darkmode'
 
 export const metadata = {
-  title: 'stackoverflow',
+  title: 'stackClone',
   description: 'this is a clone',
   icons: {
     icon: '/assets/images/site-logo.svg'

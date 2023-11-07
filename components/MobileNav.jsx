@@ -32,7 +32,7 @@ function MobileNav () {
             height={23}
           />
           <p className='h2-bold text-dark-100 dark:text-light-900'>stack
-            <span className='text-orange-500'>overflow</span>
+            <span className='text-orange-500'>Clone</span>
           </p>
         </Link>
         {/* menu */}

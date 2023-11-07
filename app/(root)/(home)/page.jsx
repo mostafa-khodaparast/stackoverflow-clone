@@ -1,35 +1,15 @@
 import Link from 'next/link'
+import { HomePageFilters } from '@constants'
 import LocalSearchbar from '@components/LocalSearchbar'
 import Filter from '@components/Filter'
 import HomeFilter from '@components/HomeFilter'
-import { HomePageFilters } from '@constants'
 import NoResult from '@components/NoResult'
 import QuesionCard from '@components/QuestionCard'
+import { getQuestions } from '@lib/actions/question.action'
 
-const questions = [
-  {
-    _id: 1,
-    title: 'cascading deletes in ddddddddddddddddddddddddddddddddsql',
-    tags: [{ _id: 1, name: 'python' }, { _id: 2, name: 'sql' }],
-    author: { _id: 12, name: 'mina', image: '/assets/icons/avatar.svg' },
-    upvotes: 10,
-    views: 100,
-    answers: 2,
-    createdAt: '2021-11-04'
-  },
-  {
-    _id: 2,
-    title: 'cascading deletes in python',
-    tags: [{ _id: 1, name: 'css' }, { _id: 2, name: 'html' }],
-    author: { name: 'mostafa', image: '/assets/icons/avatar.svg' },
-    upvotes: 10,
-    views: 154570000,
-    answers: 244787000,
-    createdAt: '2023-09-03'
-  }
-]
+export default async function Home () {
+  const results = await getQuestions()
 
-export default function Home () {
   return (
     <>
       <div className="flex flex-col">
@@ -54,11 +34,11 @@ export default function Home () {
         <HomeFilter />
       </div>
       <div className='mt-10 flex w-full flex-col gap-4'>
-        {questions.length > 0
-          ? questions.map(question => <QuesionCard key={question._id} question={question} />)
+        {results.length > 0
+          ? results.map(question => <QuesionCard key={question._id} question={question} />)
           : <NoResult
                 title='There is no quesion to show'
-                link='/ask-quesion'
+                link='/ask-question'
                 linkTitle='Ask s Question'
             />
         }

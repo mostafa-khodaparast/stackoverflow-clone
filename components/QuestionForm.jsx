@@ -4,7 +4,7 @@ import { Editor } from '@tinymce/tinymce-react'
 import { createQuestion } from '@lib/actions/question.action'
 import { useRouter, usePathname } from 'next/navigation'
 
-function QuestionForm ({mongoUserId}) {
+function QuestionForm ({ mongoUserId }) {
   const [questionTitle, setQuestionTitle] = useState('')
   const [questionTags, setQuestionTags] = useState([])
   const editorRef = useRef(null) // this is for questionBody
@@ -29,8 +29,9 @@ function QuestionForm ({mongoUserId}) {
       title: questionTitle,
       content: editorRef.current.getContent(),
       tags: questionTags,
-      author: mongoUserId
+      author: mongoUserId,
       // author: JSON.parse(mongoUserId)
+      path: pathname
     })
     // redirect user to homepage after creating a question
     router.push('/')
@@ -104,6 +105,3 @@ function QuestionForm ({mongoUserId}) {
 }
 
 export default QuestionForm
-
-
-  

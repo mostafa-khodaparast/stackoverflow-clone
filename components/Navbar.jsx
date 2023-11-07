@@ -18,7 +18,7 @@ function Navbar () {
                     height={23}
                 />
                 <p className=' text-[24px] font-bold leading-[31.2px] text-dark-100 dark:text-light-900 max-md:hidden'>stack
-                    <span className='text-orange-500'>overflow</span>
+                    <span className='text-orange-500'>Clone</span>
                 </p>
             </Link>
             {/* search bar */}
