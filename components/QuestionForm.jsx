@@ -1,17 +1,20 @@
 'use client'
 import React, { useRef, useState } from 'react'
 import { Editor } from '@tinymce/tinymce-react'
-import Image from 'next/image'
+import { createQuestion } from '@lib/actions/question.action'
+import { useRouter, usePathname } from 'next/navigation'
 
-function QuestionForm () {
+function QuestionForm ({mongoUserId}) {
   const [questionTitle, setQuestionTitle] = useState('')
   const [questionTags, setQuestionTags] = useState([])
   const editorRef = useRef(null) // this is for questionBody
+  const router = useRouter()
+  const pathname = usePathname()
 
   const handleTagInput = (e, value) => {
     if (e.key === 'Enter') {
       setQuestionTags([...questionTags, value])
-      e.target.value = ''
+      e.target.value = '' // empty the input to set new tag
     }
   }
 
@@ -19,14 +22,18 @@ function QuestionForm () {
     setQuestionTags(questionTags => questionTags.filter(val => val !== tag))
   }
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault()
-    const formData = {
-      questionTitle,
-      questionBody: editorRef.current.getContent(),
-      questionTags
-    }
-    console.log(formData)
+    // create question by an action to connect to mongo
+    await createQuestion({
+      title: questionTitle,
+      content: editorRef.current.getContent(),
+      tags: questionTags,
+      author: mongoUserId
+      // author: JSON.parse(mongoUserId)
+    })
+    // redirect user to homepage after creating a question
+    router.push('/')
   }
 
   return (
@@ -43,6 +50,7 @@ function QuestionForm () {
                 {/* tiny editor for question body */}
                 <Editor
                     apiKey='be8uwtd8v6ask56npc0otvnued3k024fbqxazadbid88ukun'
+                    // eslint-disable-next-line no-return-assign
                     onInit={(evt, editor) => editorRef.current = editor}
                     initialValue=''
                     init={{
@@ -96,3 +104,6 @@ function QuestionForm () {
 }
 
 export default QuestionForm
+
+
+  

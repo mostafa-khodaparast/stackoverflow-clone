@@ -15,7 +15,7 @@ const questions = [
     upvotes: 10,
     views: 100,
     answers: 2,
-    createdAt: '2023-11-04'
+    createdAt: '2021-11-04'
   },
   {
     _id: 2,
