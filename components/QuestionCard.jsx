@@ -6,7 +6,7 @@ import Image from 'next/image'
 import { changeDateToString, formatNumber } from '@lib/utils'
 
 function QuestionCard ({ question }) {
-  console.log(question)
+  console.log('----------------:::::::::question::::::::', question)
   return (
         <div className=' rounded-lg bg-light-700 p-4 font-semibold text-light-500 shadow-light-200 dark:bg-gradient-to-r dark:from-[#171c23] dark:to-[#13161c] dark:text-orange-500 dark:shadow-dark-100 md:p-6'>
             {/* title */}
@@ -26,17 +26,16 @@ function QuestionCard ({ question }) {
             <div className='mt-3 flex flex-col gap-1 sm:flex-row sm:items-center sm:justify-between'>
                 {/* author */}
                 <div className='flex items-center gap-1'>
-                    <Link href={`/profile/${question.author.clerkId}`} className='flex gap-1'>
-                    {/* <Link href={`/profile/${question._id}`} className='flex gap-1'> */}
+                    <Link href={`/profile/${question.author?._id}`} className='flex gap-1'>
                         <Image
-                            src={question.author.picture}
-                            alt={question.author.name}
+                            src={question.author?.picture}
+                            alt={question.author?.name}
                             width={20}
                             height={20}
                             className='rounded-full'
                         />
                         <span className='text-sm text-stone-600 dark:text-orange-300'>
-                            {question.author.name}
+                            {question.author?.name}
                         </span>
                     </Link>
                 </div>
