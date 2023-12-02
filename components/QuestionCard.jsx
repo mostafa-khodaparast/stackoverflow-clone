@@ -26,10 +26,10 @@ function QuestionCard ({ question }) {
             <div className='mt-3 flex flex-col gap-1 sm:flex-row sm:items-center sm:justify-between'>
                 {/* author */}
                 <div className='flex items-center gap-1'>
-                    <Link href={`/profile/${question.author._id}`} className='flex gap-1'>
+                    <Link href={`/profile/${question.author.clerkId}`} className='flex gap-1'>
                     {/* <Link href={`/profile/${question._id}`} className='flex gap-1'> */}
                         <Image
-                            src={question.author.image}
+                            src={question.author.picture}
                             alt={question.author.name}
                             width={20}
                             height={20}
