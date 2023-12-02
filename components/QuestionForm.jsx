@@ -29,8 +29,8 @@ function QuestionForm ({ mongoUserId }) {
       title: questionTitle,
       content: editorRef.current.getContent(),
       tags: questionTags,
-      // author: mongoUserId,
-      author: JSON.parse(mongoUserId),
+      author: mongoUserId,
+      // author: JSON.parse(mongoUserId)
       path: pathname
     })
     // redirect user to homepage after creating a question
