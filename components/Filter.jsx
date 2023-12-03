@@ -1,6 +1,6 @@
 import React from 'react'
 
-function Filter ({ filters, extraClasses, containerClasses, title}) {
+function Filter ({ filters, extraClasses, containerClasses, title }) {
   return (
         <div className={containerClasses}>
             <span className='font-semibold dark:text-light-700 '>{title} </span>
