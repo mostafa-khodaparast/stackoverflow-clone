@@ -12,10 +12,11 @@ export default async function Home () {
 
   return (
     <>
-      <div className="flex flex-col">
+      <div className="flex items-center justify-between">
+        <span className=' text-2xl font-bold text-blue-950 dark:text-orange-500'>All Questions</span>
         <Link
           href='/ask-question'
-          className="self-end rounded-lg bg-gradient-to-l  from-[#ff7000] from-0% to-[#e2995f] to-100% px-6 py-3 text-center text-light-900"
+          className="rounded-lg bg-gradient-to-l from-[#ff7000]  from-0% to-[#e2995f] to-100% px-6 py-3 text-center font-bold text-light-900"
         >
           Ask a Question
         </Link>
@@ -27,6 +28,7 @@ export default async function Home () {
           extraClasses=''
         />
         <Filter
+          title='Filter Questions :'
           filters={HomePageFilters}
           extraClasses=''
           containerClasses='md:hidden'

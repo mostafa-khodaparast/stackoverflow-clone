@@ -6,7 +6,6 @@ import Image from 'next/image'
 import { changeDateToString, formatNumber } from '@lib/utils'
 
 function QuestionCard ({ question }) {
-  console.log('----------------:::::::::question::::::::', question)
   return (
         <div className=' rounded-lg bg-light-700 p-4 font-semibold text-light-500 shadow-light-200 dark:bg-gradient-to-r dark:from-[#171c23] dark:to-[#13161c] dark:text-orange-500 dark:shadow-dark-100 md:p-6'>
             {/* title */}
