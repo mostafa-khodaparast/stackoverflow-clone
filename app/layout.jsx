@@ -1,6 +1,7 @@
 import React from 'react'
 import { ClerkProvider } from '@clerk/nextjs'
 import './globals.css'
+import '../styles/prism.css'
 import { DarkModeProvider } from '../context/darkmode'
 
 export const metadata = {

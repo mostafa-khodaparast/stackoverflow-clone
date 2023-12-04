@@ -1,3 +1,4 @@
+/* eslint-disable no-trailing-spaces */
 import React from 'react'
 import Filter from '@components/Filter'
 import LocalSearchbar from '@components/LocalSearchbar'
@@ -7,7 +8,7 @@ import { getAllTags } from '@lib/actions/tag.action'
 
 async function page () {
   const tags = await getAllTags()
-  console.log(tags)
+  
   return (
     <>
         <div className="flex items-center justify-between">
