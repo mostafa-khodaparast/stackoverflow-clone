@@ -1,32 +1,33 @@
+import React from 'react'
 import Filter from '@components/Filter'
 import LocalSearchbar from '@components/LocalSearchbar'
-import { UserFilters } from '@constants'
-import { getAllUsers } from '@lib/actions/user.action'
-import UserCard from '@components/UserCard'
+import TagCard from '@components/TagCard'
+import { TagFilters } from '@constants'
+import { getAllTags } from '@lib/actions/tag.action'
 
 async function page () {
-  const users = await getAllUsers()
-
+  const tags = await getAllTags()
+  console.log(tags)
   return (
     <>
         <div className="flex items-center justify-between">
-            <span className=' text-2xl font-bold text-blue-950 dark:text-orange-500'>All Users</span>
+            <span className=' text-2xl font-bold text-blue-950 dark:text-orange-500'>All Tags</span>
         </div>
         <div className='mt-5 flex items-center space-x-2'>
             <LocalSearchbar
-                route='/community'
-                placeholder='Search for users'
+                route='/tags'
+                placeholder='Search for tags'
                 extraClasses=''
             />
             <Filter
                 title=''
-                filters={UserFilters}
+                filters={TagFilters}
                 extraClasses=''
                 containerClasses=''
             />
         </div>
         <div className=' mt-6 flex flex-wrap gap-3'>
-            {users.map(user => <UserCard key={user.clerkId} user={user} />)}
+            {tags.map(tag => <TagCard key={tag._id} tag={tag} />)}
         </div>
     </>
   )
