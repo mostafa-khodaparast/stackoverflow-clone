@@ -25,7 +25,7 @@ async function page () {
                 containerClasses=''
             />
         </div>
-        <div className=' mt-6 flex flex-wrap gap-2 w-full'>
+        <div className=' mt-6 flex gap-2 w-full'>
             {users.map(user => <UserCard key={user.clerkId} user={user} />)}
         </div>
     </>
