@@ -8,16 +8,16 @@ import GlobalSearchbar from '@components/GlobalSearchbar'
 
 function Navbar () {
   return (
-        <nav className='fixed z-50 flex w-full items-center justify-between gap-5 bg-light-900 p-6 shadow-light-300 dark:bg-dark-200 dark:shadow-none sm:px-12 '>
+        <nav className='fixed z-50 flex w-full items-center justify-between gap-3 bg-light-900 p-6 shadow-light-300 dark:bg-dark-200 dark:shadow-none sm:px-8'>
             {/* logo */}
-            <Link href='/' className='flex items-center gap-1'>
+            <Link href='/' className='hidden items-center gap-1 md:flex'>
                 <Image
                     src='/assets/images/site-logo.svg'
                     alt='logo'
                     width={23}
                     height={23}
                 />
-                <p className=' text-[24px] font-bold leading-[31.2px] text-dark-100 dark:text-light-900 max-md:hidden'>stack
+                <p className=' text-[24px] font-bold leading-[31.2px] text-dark-100 dark:text-light-900'>stack
                     <span className='text-orange-500'>Clone</span>
                 </p>
             </Link>
