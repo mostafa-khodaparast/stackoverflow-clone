@@ -65,7 +65,8 @@ function QuestionForm ({ mongoUserId }) {
                       toolbar: 'undo redo | ' +
                             'codesample | bold italic forecolor | alignleft aligncenter | ' +
                             'alignright alignjustify | bullist numlist',
-                      content_style: 'body { font-family:Helvetica,Arial,sans-serif; font-size:16px; background-color:#dce3f1 }'
+                      content_style: 'body { font-family:Helvetica,Arial,sans-serif; font-size:16px; background-color:#dce3f1 }',
+                      skin: 'oxide-dark'
                     }}
                 />
                 {/* question tags */}
