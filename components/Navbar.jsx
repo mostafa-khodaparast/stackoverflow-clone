@@ -1,4 +1,3 @@
-import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
 import { SignedIn, UserButton } from '@clerk/nextjs'
@@ -11,14 +10,8 @@ function Navbar () {
         <nav className='fixed z-50 flex w-full items-center justify-between gap-3 bg-light-900 p-6 shadow-light-300 dark:bg-dark-200 dark:shadow-none sm:px-8'>
             {/* logo */}
             <Link href='/' className='hidden items-center gap-1 md:flex'>
-                <Image
-                    src='/assets/images/site-logo.svg'
-                    alt='logo'
-                    width={23}
-                    height={23}
-                />
-                <p className=' text-[24px] font-bold leading-[31.2px] text-dark-100 dark:text-light-900'>stack
-                    <span className='text-orange-500'>Clone</span>
+                <p className=' text-[24px] font-bold leading-[31.2px] text-dark-100 dark:text-light-900'>Stack
+                    <span className='text-green-500'>Clone</span>
                 </p>
             </Link>
             {/* search bar */}

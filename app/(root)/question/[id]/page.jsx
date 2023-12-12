@@ -14,7 +14,7 @@ async function Page ({ params }) {
   
   return (
     <>
-        <div className='flex w-full flex-col text-blue-950 dark:text-orange-500'>
+        <div className='flex w-full flex-col text-blue-950 dark:text-light-700'>
             <div className='flex justify-end'>
                 voting
             </div>
@@ -32,7 +32,7 @@ async function Page ({ params }) {
 
             <h2 className=' mt-4 text-2xl font-bold'>{question.title}</h2>
 
-            <div className='my-4 flex gap-4 text-sm text-stone-600 dark:text-orange-300'>
+            <div className='my-4 flex gap-4 text-sm text-stone-600 dark:text-green-500'>
                 <QuestionStats
                     imageSrc='/assets/icons/clock.svg'
                     alt='asked'

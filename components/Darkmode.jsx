@@ -13,14 +13,12 @@ const Darkmode = () => {
                 alt='light'
                 width={25}
                 height={25}
-                className='active-theme'
             />
           : <Image
                 src='/assets/icons/moon.svg'
                 alt='light'
                 width={25}
                 height={25}
-                className='active-theme'
             />
         }
     </div>

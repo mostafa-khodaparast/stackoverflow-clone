@@ -7,10 +7,10 @@ import { changeDateToString, formatNumber } from '@lib/utils'
 
 function QuestionCard ({ question }) {
   return (
-        <div className=' rounded-lg bg-light-700 p-4 font-semibold text-light-500 shadow-light-200 dark:bg-gradient-to-r dark:from-[#171c23] dark:to-[#13161c] dark:text-orange-500 dark:shadow-dark-100 md:p-6'>
+        <div className=' rounded-lg bg-light-700 p-4 font-semibold text-light-500 shadow-light-200 dark:bg-gradient-to-r dark:from-[#171c23] dark:to-[#13161c] dark:text-green-500 dark:shadow-dark-100 md:p-6'>
             {/* title */}
             <div className='mt-1 flex flex-col'>
-                <Link href={`question/${question._id}`} className='line-clamp-1 font-semibold text-dark-400 dark:text-orange-500 md:font-bold '>
+                <Link href={`question/${question._id}`} className='line-clamp-1 font-semibold text-dark-400 dark:text-green-500 md:font-bold '>
                     {question.title}
                 </Link>
                 {/* if signed in add delete and edit */}
@@ -33,13 +33,13 @@ function QuestionCard ({ question }) {
                             height={20}
                             className='rounded-full'
                         />
-                        <span className='text-sm text-stone-600 dark:text-orange-300'>
+                        <span className='text-sm text-stone-600 dark:text-green-500'>
                             {question.author?.name}
                         </span>
                     </Link>
                 </div>
                 {/* statistics */}
-                <div className='flex gap-2 text-sm text-stone-600 dark:text-orange-300'>
+                <div className='flex gap-2 text-sm text-stone-600 dark:text-green-500'>
                     <QuestionStats
                         imageSrc='/assets/icons/like.svg'
                         alt='votes'
@@ -61,7 +61,7 @@ function QuestionCard ({ question }) {
                 </div>
             </div>
             <div>
-                <span className='mt-3 text-sm text-stone-600 dark:text-orange-300'>
+                <span className='mt-3 text-sm text-stone-600 dark:text-green-500'>
                     Asked {changeDateToString(question.createdAt)}
                 </span>
             </div>

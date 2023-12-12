@@ -11,7 +11,7 @@ async function Page () {
 
   return (
     <>
-      <span className='text-lg font-bold text-dark-100 dark:text-light-900'>Ask a question</span>
+      <span className='text-lg font-bold text-dark-100 dark:text-light-700'>Ask a question</span>
       {/* <QuestionForm mongoUserId={JSON.stringify(mongoUser?._id)} /> */}
       <QuestionForm mongoUserId={mongoUser?._id} />
     </>

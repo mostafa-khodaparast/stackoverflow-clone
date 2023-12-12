@@ -3,7 +3,6 @@ import { HomePageFilters } from '@constants'
 import LocalSearchbar from '@components/LocalSearchbar'
 import Filter from '@components/Filter'
 import HomeFilter from '@components/HomeFilter'
-import NoResult from '@components/NoResult'
 import QuesionCard from '@components/QuestionCard'
 import { getQuestions } from '@lib/actions/question.action'
 
@@ -13,10 +12,10 @@ export default async function Home () {
   return (
     <>
       <div className="flex items-center justify-between">
-        <span className=' text-2xl font-bold text-blue-950 dark:text-orange-500'>All Questions</span>
+        <span className=' text-2xl font-bold text-blue-950 dark:text-green-500'>All Questions</span>
         <Link
           href='/ask-question'
-          className="rounded-lg bg-gradient-to-l from-[#ff7000]  from-0% to-[#e2995f] to-100% px-6 py-3 text-center font-bold text-light-900"
+          className="rounded-lg bg-gradient-to-l from-green-300  from-0% to-green-500 to-100% px-6 py-3 text-center font-bold text-light-900"
         >
           Ask a Question
         </Link>
@@ -38,11 +37,7 @@ export default async function Home () {
       <div className='mt-10 flex w-full flex-col gap-4'>
         {results.length > 0
           ? results.map(question => <QuesionCard key={question._id} question={question} />)
-          : <NoResult
-                title='There is no quesion to show'
-                link='/ask-question'
-                linkTitle='Ask s Question'
-            />
+          : <span className=' text-center text-2xl font-semibold text-blue-950 dark:text-light-700'>No question was found.Go to <Link to='/'>Home</Link></span>
         }
       </div>
     </>

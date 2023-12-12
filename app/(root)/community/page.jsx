@@ -10,7 +10,7 @@ async function page () {
   return (
     <>
         <div className="flex items-center justify-between">
-            <span className=' text-2xl font-bold text-blue-950 dark:text-orange-500'>All Users</span>
+            <span className=' text-2xl font-bold text-blue-950 dark:text-green-500'>All Users</span>
         </div>
         <div className='mt-5 flex items-center space-x-2'>
             <LocalSearchbar
